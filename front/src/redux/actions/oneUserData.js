@@ -22,7 +22,7 @@ export const fetchUserOne = function (id) {
       for (var i = 0; i < arrayPeliculas.length; i++) {
         let movieId = arrayPeliculas[i];
         peliculas.push(
-          axios.get(`http://omdbapi.com/?apikey=20dac387&i=${movieId}`)
+          axios.get(`https://omdbapi.com/?apikey=20dac387&i=${movieId}`)
         );
       }
 

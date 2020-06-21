@@ -1,4 +1,4 @@
-require("../back/models/db/index");
+require("./models/db/index");
 var createError = require("http-errors");
 var express = require("express");
 var session = require("express-session");
@@ -14,6 +14,7 @@ var bodyParser = require("body-parser");
 var path = require("path");
 var users = require("./routes/users");
 const volleyball = require("volleyball");
+
 app.use(volleyball);
 app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -22,7 +23,7 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use(session({ secret: "BootcampP5" }));
 app.use(passport.initialize());
 app.use(passport.session());
-
+const port = process.env.PORT || 3000;
 passport.use(
   new LocalStrategy(
     { usernameField: "email", passwordField: "password" },
@@ -64,6 +65,6 @@ app.use("/", routes);
 
 app.use("/users", users);
 
-app.listen(3000);
+app.listen(port);
 
 module.exports = app;

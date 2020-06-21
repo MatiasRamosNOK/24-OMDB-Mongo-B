@@ -43586,20 +43586,10 @@ var Main = /*#__PURE__*/function (_React$Component) {
           className: "contenedorMovie"
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
           to: "/movie/".concat(movie.imdbID)
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_Card__WEBPACK_IMPORTED_MODULE_6__["default"], {
-          style: {
-            width: "18rem",
-            height: "28rem"
-          }
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_Card__WEBPACK_IMPORTED_MODULE_6__["default"].Img, {
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_Card__WEBPACK_IMPORTED_MODULE_6__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_Card__WEBPACK_IMPORTED_MODULE_6__["default"].Img, {
           variant: "top",
           src: movie.Poster
-        }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_Card__WEBPACK_IMPORTED_MODULE_6__["default"].Body, {
-          style: {
-            backgroundColor: "#403c3a",
-            color: "#f0ffff"
-          }
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_Card__WEBPACK_IMPORTED_MODULE_6__["default"].Title, null, movie.Title)))));
+        }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_Card__WEBPACK_IMPORTED_MODULE_6__["default"].Body, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_Card__WEBPACK_IMPORTED_MODULE_6__["default"].Title, null, movie.Title)))));
       }) : null));
     }
   }]);
@@ -44702,7 +44692,7 @@ var SingleUser = /*#__PURE__*/function (_React$Component) {
     value: function render() {
       var _this3 = this;
 
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_Jumbotron__WEBPACK_IMPORTED_MODULE_5__["default"], null, Object.keys(this.state.userOne.userOne).includes("email") ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Hello, this is the profile of:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, this.state.userOne.userOne.email), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "Favourites movies:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, Object.keys(this.state.userOne.userOne).includes("moviesData") && this.state.userOne.userOne.moviesData.length > 1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_Carousel__WEBPACK_IMPORTED_MODULE_6__["default"], {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_Jumbotron__WEBPACK_IMPORTED_MODULE_5__["default"], null, Object.keys(this.state.userOne.userOne).includes("email") ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Hello, this is the profile of:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, this.state.userOne.userOne.email), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "Favourites movies:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, Object.keys(this.state.userOne.userOne).includes("moviesData") && this.state.userOne.userOne.moviesData.length >= 1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_Carousel__WEBPACK_IMPORTED_MODULE_6__["default"], {
         id: "myCarousel"
       }, this.state.userOne.userOne.moviesData.map(function (movie, index) {
         {
@@ -44928,7 +44918,7 @@ var fetchUserOne = function fetchUserOne(id) {
 
       for (var i = 0; i < arrayPeliculas.length; i++) {
         var movieId = arrayPeliculas[i];
-        peliculas.push(axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("http://omdbapi.com/?apikey=20dac387&i=".concat(movieId)));
+        peliculas.push(axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("https://omdbapi.com/?apikey=20dac387&i=".concat(movieId)));
       }
 
       Promise.all(peliculas).then(function (algo) {
@@ -44986,7 +44976,7 @@ var removeMovie = function removeMovie(idUser, idMovie) {
 
         for (var i = 0; i < arrayPeliculas.length; i++) {
           var movieId = arrayPeliculas[i];
-          peliculas.push(axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("http://omdbapi.com/?apikey=20dac387&i=".concat(movieId)));
+          peliculas.push(axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("https://omdbapi.com/?apikey=20dac387&i=".concat(movieId)));
         }
 
         Promise.all(peliculas).then(function (algo) {

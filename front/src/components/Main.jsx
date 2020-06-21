@@ -58,14 +58,9 @@ class Main extends React.Component {
                 return (
                   <div key={movie.imdbID} className="contenedorMovie">
                     <Link to={`/movie/${movie.imdbID}`}>
-                      <Card style={{ width: "18rem", height: "28rem" }}>
+                      <Card>
                         <Card.Img variant="top" src={movie.Poster} />
-                        <Card.Body
-                          style={{
-                            backgroundColor: "#403c3a",
-                            color: "#f0ffff",
-                          }}
-                        >
+                        <Card.Body>
                           <Card.Title>{movie.Title}</Card.Title>
                         </Card.Body>
                       </Card>

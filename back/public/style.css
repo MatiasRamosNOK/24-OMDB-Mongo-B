@@ -7,119 +7,142 @@ body {
   color: #f0ffff;
 }
 
-.list-group-item {
-  color: black;
+@media (min-width: 1024px) {
+  .list-group-item {
+    color: black;
+  }
+
+  .list-group {
+    width: 60%;
+    margin: 0 auto;
+    margin-top: 30px;
+  }
+
+  #contenido {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    width: 90%;
+    align-items: center;
+    justify-content: space-between;
+    align-self: stretch;
+    height: 100%;
+  }
+
+  .contenedorMovie {
+    align-items: center;
+    width: 25%;
+    height: 100%;
+    margin-top: 15px;
+    margin-bottom: 20px;
+  }
+
+  .titleMovie {
+    width: 100%;
+  }
+  .imgMovie {
+    width: 100%;
+  }
+
+  .contPeliUser {
+    margin-bottom: 10px;
+  }
+
+  #inputUser {
+    width: 50%;
+    margin: 0 auto;
+  }
+
+  .inputData {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+  }
+
+  img {
+    height: 350px;
+  }
+
+  a {
+    color: white;
+    text-decoration: none;
+  }
+
+  .jumbotron {
+    color: azure;
+    width: 50%;
+    margin: 0 auto;
+    background-color: rgb(64, 60, 58);
+  }
+
+  .carousel {
+    width: 45%;
+    margin: 0 auto;
+  }
+
+  .containerMovie {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  .posterMovie {
+    display: flex;
+    width: 30%;
+    margin-top: 30px;
+  }
+
+  .infoMovie {
+    display: flex;
+    width: 60%;
+  }
+
+  .spinnerDIV {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .carousel-indicators {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    top: 0;
+    height: 10%;
+    z-index: 15;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    padding-left: 0;
+    margin-right: 15%;
+    margin-left: 15%;
+    list-style: none;
+  }
 }
 
-.list-group {
-  width: 60%;
-  margin: 0 auto;
-  margin-top: 30px;
-}
+@media (max-width: 1024px) {
+  #contenido {
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    margin: 0 auto;
+    width: 80%;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
 
-#contenido {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  margin: 0 auto;
-  width: 90%;
-  align-items: center;
-  justify-content: space-between;
-  align-self: stretch;
-  height: 100%;
-}
-
-.contenedorMovie {
-  align-items: center;
-  width: 25%;
-  height: 100%;
-  margin-top: 15px;
-  margin-bottom: 20px;
-}
-
-.titleMovie {
-  width: 100%;
-}
-.imgMovie {
-  width: 100%;
-}
-
-.contPeliUser {
-  margin-bottom: 10px;
-}
-
-#inputUser {
-  width: 50%;
-  margin: 0 auto;
-}
-
-.inputData {
-  display: flex;
-  width: 100vw;
-  height: 100vh;
-  justify-content: center;
-  align-items: center;
-}
-
-img {
-  height: 350px;
-}
-
-a {
-  color: white;
-  text-decoration: none;
-}
-
-.jumbotron {
-  color: azure;
-  width: 50%;
-  margin: 0 auto;
-  background-color: rgb(64, 60, 58);
-}
-
-.carousel {
-  width: 45%;
-  margin: 0 auto;
-}
-
-.containerMovie {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: center;
-}
-
-.posterMovie {
-  display: flex;
-  width: 30%;
-  margin-top: 30px;
-}
-
-.infoMovie {
-  display: flex;
-  width: 60%;
-}
-
-.spinnerDIV {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.carousel-indicators {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  top: 0;
-  height: 10%;
-  z-index: 15;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: center;
-  justify-content: center;
-  padding-left: 0;
-  margin-right: 15%;
-  margin-left: 15%;
-  list-style: none;
+  .contenedorMovie {
+    display: flex;
+    background-color: blueviolet;
+    height: 600px;
+    width: 350px;
+    margin-bottom: 15px;
+  }
 }

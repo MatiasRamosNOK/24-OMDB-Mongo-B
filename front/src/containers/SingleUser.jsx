@@ -48,7 +48,7 @@ class SingleUser extends React.Component {
               <div>
                 {Object.keys(this.state.userOne.userOne).includes(
                   "moviesData"
-                ) && this.state.userOne.userOne.moviesData.length > 1 ? (
+                ) && this.state.userOne.userOne.moviesData.length >= 1 ? (
                   <Carousel id="myCarousel">
                     {this.state.userOne.userOne.moviesData.map(
                       (movie, index) => {
