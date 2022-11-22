@@ -37,7 +37,7 @@
     "babel-loader": "^8.0.5",
     "node-fetch": "^2.6.0",
     "webpack": "^4.29.3",
-    "webpack-cli": "^3.2.3"
+    "webpack-cli": "^3.3.12"
   },
   "proxy": "localhost:3000"
 }
